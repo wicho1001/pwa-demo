@@ -31,6 +31,7 @@ const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
 registerRoute(
   // Return false to exempt requests from being fulfilled by index.html.
   ({ request, url }: { request: Request; url: URL }) => {
+    console.log('hello')
     // If this isn't a navigation, skip.
     if (request.mode !== 'navigate') {
       return false;
